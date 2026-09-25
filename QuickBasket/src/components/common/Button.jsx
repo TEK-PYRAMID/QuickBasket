@@ -1,10 +1,19 @@
-// Owner: Prashant (Architecture & Shared UI)
-
-const Button = (props) => {
+const Button = ({
+  children,
+  type = "button",
+  onClick,
+  disabled = false,
+  className = "",
+}) => {
   return (
-    <div className="button">
-      {/* TODO: implement Button component */}
-    </div>
+    <button
+      type={type}
+      onClick={onClick}
+      disabled={disabled}
+      className={`button ${className}`}
+    >
+      {children}
+    </button>
   );
 };
 
