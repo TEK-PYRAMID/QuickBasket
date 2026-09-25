@@ -1,34 +1,10 @@
-const Modal = ({
-  isOpen,
-  onClose,
-  title,
-  children,
-}) => {
-  if (!isOpen) {
-    return null;
-  }
-
+const Loader = ({ message = "Loading..." }) => {
   return (
-    <div className="modal-overlay">
-      <div className="modal">
-        <div className="modal-header">
-          <h2>{title}</h2>
-
-          <button
-            type="button"
-            onClick={onClose}
-            className="modal-close"
-          >
-            ×
-          </button>
-        </div>
-
-        <div className="modal-body">
-          {children}
-        </div>
-      </div>
+    <div className="loader-container">
+      <div className="loader"></div>
+      <p>{message}</p>
     </div>
   );
 };
 
-export default Modal;
+export default Loader;
