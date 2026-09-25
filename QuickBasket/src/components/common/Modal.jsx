@@ -1,9 +1,32 @@
-// Owner: Prashant (Architecture & Shared UI)
+const Modal = ({
+  isOpen,
+  onClose,
+  title,
+  children,
+}) => {
+  if (!isOpen) {
+    return null;
+  }
 
-const Modal = (props) => {
   return (
-    <div className="modal">
-      {/* TODO: implement Modal component */}
+    <div className="modal-overlay">
+      <div className="modal">
+        <div className="modal-header">
+          <h2>{title}</h2>
+
+          <button
+            type="button"
+            onClick={onClose}
+            className="modal-close"
+          >
+            ×
+          </button>
+        </div>
+
+        <div className="modal-body">
+          {children}
+        </div>
+      </div>
     </div>
   );
 };
