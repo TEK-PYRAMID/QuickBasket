@@ -1,9 +1,8 @@
-// Owner: Prashant (Architecture & Shared UI)
-import React from "react";
-const Loader = (props) => {
+const Loader = ({ message = "Loading..." }) => {
   return (
-    <div className="loader">
-      {/* TODO: implement Loader component */}
+    <div className="loader-container">
+      <div className="loader"></div>
+      <p>{message}</p>
     </div>
   );
 };

@@ -1,9 +1,25 @@
-// Owner: Prashant (Architecture & Shared UI)
-import React from "react";
-const Toast = (props) => {
+const Toast = ({
+  message,
+  type = "success",
+  onClose,
+}) => {
+  if (!message) {
+    return null;
+  }
+
   return (
-    <div className="toast">
-      {/* TODO: implement Toast component */}
+    <div className={`toast toast-${type}`}>
+      <span>{message}</span>
+
+      {onClose && (
+        <button
+          type="button"
+          onClick={onClose}
+          className="toast-close"
+        >
+          ×
+        </button>
+      )}
     </div>
   );
 };

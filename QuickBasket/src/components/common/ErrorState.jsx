@@ -1,9 +1,22 @@
-// Owner: Prashant (Architecture & Shared UI)
-import React from "react";
-const ErrorState = (props) => {
+const ErrorState = ({
+  title = "Something went wrong",
+  message = "Unable to load the requested data.",
+  onRetry,
+}) => {
   return (
-    <div className="errorstate">
-      {/* TODO: implement ErrorState component */}
+    <div className="error-state">
+      <h2>{title}</h2>
+
+      <p>{message}</p>
+
+      {onRetry && (
+        <button
+          type="button"
+          onClick={onRetry}
+        >
+          Try Again
+        </button>
+      )}
     </div>
   );
 };
