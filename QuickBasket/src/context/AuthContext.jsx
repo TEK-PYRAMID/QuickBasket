@@ -1,6 +1,6 @@
 // Owner: Alcious (Supporting: Ramya)
 // Handles authentication state, user session, login/logout
-
+import React from "react";
 import { createContext, useContext, useState } from 'react';
 
 const AuthContext = createContext(null);

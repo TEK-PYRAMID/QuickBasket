@@ -1,6 +1,6 @@
 // Owner: Sundaravadhani (Supporting: Alcious)
 // Handles user profile/account data
-
+import React from "react";
 import { createContext, useContext, useState } from 'react';
 
 const UserContext = createContext(null);
