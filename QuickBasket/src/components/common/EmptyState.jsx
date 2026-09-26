@@ -1,5 +1,5 @@
 // Owner: Prashant (Architecture & Shared UI)
-
+import React from "react";
 const EmptyState = (props) => {
   return (
     <div className="emptystate">
