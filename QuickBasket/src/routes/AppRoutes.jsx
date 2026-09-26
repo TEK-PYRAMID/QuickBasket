@@ -2,7 +2,7 @@
 // Individual routes wired in by each page's owner
 
 import { Routes, Route } from 'react-router-dom';
-
+import React from "react";
 import Home from '../pages/Home';
 import Categories from '../pages/Categories';
 import Login from '../pages/Login';
@@ -27,7 +27,7 @@ import NotFound from '../pages/NotFound';
 
 const AppRoutes = () => (
   <Routes>
-    <Route path="/" element={<Home />} />
+    {/* <Route path="/" element={<Home />} /> */}
     <Route path="/categories" element={<Categories />} />
     <Route path="/login" element={<Login />} />
     <Route path="/signup" element={<Signup />} />

@@ -1,9 +1,25 @@
-// Owner: Prashant (Architecture & Shared UI)
+const Toast = ({
+  message,
+  type = "success",
+  onClose,
+}) => {
+  if (!message) {
+    return null;
+  }
 
-const Toast = (props) => {
   return (
-    <div className="toast">
-      {/* TODO: implement Toast component */}
+    <div className={`toast toast-${type}`}>
+      <span>{message}</span>
+
+      {onClose && (
+        <button
+          type="button"
+          onClick={onClose}
+          className="toast-close"
+        >
+          ×
+        </button>
+      )}
     </div>
   );
 };

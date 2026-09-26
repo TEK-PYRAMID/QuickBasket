@@ -1,6 +1,6 @@
 // Owner: Mubeena (Supporting: Poorvika)
 // Handles wishlist state
-
+import React from "react";
 import { createContext, useContext, useState } from 'react';
 
 const WishlistContext = createContext(null);

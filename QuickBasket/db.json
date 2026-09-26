@@ -1,0 +1,29 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "name": "Mubina",
+      "email": "mubina@gmail.com",
+      "password": "123456"
+    },
+    {
+      "id": "2",
+      "name": "Priya",
+      "email": "priya@gmail.com",
+      "password": "123456"
+    },
+    {
+      "name": "test",
+      "email": "test@123.com",
+      "password": "12345678",
+      "id": "uu5RiWo4EtY"
+    },
+    {
+      "name": "MUBINA D",
+      "email": "mubina.hvr@gmail.com",
+      "password": "12345678",
+      "id": "QCj_8SHfr60"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
