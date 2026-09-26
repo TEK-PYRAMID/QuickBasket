@@ -1,31 +1,11 @@
-// Owner: Prashant (Architecture & Shared UI)
 import React from "react";
-import { BrowserRouter } from 'react-router-dom';
-import MainLayout from './layouts/MainLayout';
-import AppRoutes from './routes/AppRoutes';
-
-import { AuthProvider } from './context/AuthContext';
-import { CartProvider } from './context/CartContext';
-import { WishlistProvider } from './context/WishlistContext';
-import { UserProvider } from './context/UserContext';
-import { OrderProvider } from './context/OrderContext';
+import { BrowserRouter } from "react-router-dom";
+import AppRoutes from "./routes/AppRoutes";
 
 function App() {
   return (
     <BrowserRouter>
-      <AuthProvider>
-        <UserProvider>
-          <CartProvider>
-            <WishlistProvider>
-              <OrderProvider>
-                <MainLayout>
-                  <AppRoutes />
-                </MainLayout>
-              </OrderProvider>
-            </WishlistProvider>
-          </CartProvider>
-        </UserProvider>
-      </AuthProvider>
+      <AppRoutes />
     </BrowserRouter>
   );
 }

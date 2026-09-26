@@ -1,54 +1,120 @@
-// Owner: Prashant (Architecture & Shared UI) — routing foundation
-// Individual routes wired in by each page's owner
+// Owner: Prashant (Architecture & Shared UI)
+// Object-based routing foundation
 
-import { Routes, Route } from 'react-router-dom';
 import React from "react";
-import Home from '../pages/Home';
-import Categories from '../pages/Categories';
-import Login from '../pages/Login';
-import Signup from '../pages/Signup';
-import OTPVerification from '../pages/OTPVerification';
-import ForgotPassword from '../pages/ForgotPassword';
-import ProductListing from '../pages/ProductListing';
-import ProductDetails from '../pages/ProductDetails';
-import SearchResults from '../pages/SearchResults';
-import Wishlist from '../pages/Wishlist';
-import Cart from '../pages/Cart';
-import AddressManagement from '../pages/AddressManagement';
-import Checkout from '../pages/Checkout';
-import Payment from '../pages/Payment';
-import OrderConfirmation from '../pages/OrderConfirmation';
-import MyOrders from '../pages/MyOrders';
-import OrderDetails from '../pages/OrderDetails';
-import OrderTracking from '../pages/OrderTracking';
-import Profile from '../pages/Profile';
-import AccountSettings from '../pages/AccountSettings';
-import NotFound from '../pages/NotFound';
+import { useRoutes } from "react-router-dom";
 
-const AppRoutes = () => (
-  <Routes>
-    {/* <Route path="/" element={<Home />} /> */}
-    <Route path="/categories" element={<Categories />} />
-    <Route path="/login" element={<Login />} />
-    <Route path="/signup" element={<Signup />} />
-    <Route path="/otp-verification" element={<OTPVerification />} />
-    <Route path="/forgot-password" element={<ForgotPassword />} />
-    <Route path="/products" element={<ProductListing />} />
-    <Route path="/products/:id" element={<ProductDetails />} />
-    <Route path="/search" element={<SearchResults />} />
-    <Route path="/wishlist" element={<Wishlist />} />
-    <Route path="/cart" element={<Cart />} />
-    <Route path="/addresses" element={<AddressManagement />} />
-    <Route path="/checkout" element={<Checkout />} />
-    <Route path="/payment" element={<Payment />} />
-    <Route path="/order-confirmation" element={<OrderConfirmation />} />
-    <Route path="/orders" element={<MyOrders />} />
-    <Route path="/orders/:id" element={<OrderDetails />} />
-    <Route path="/orders/:id/tracking" element={<OrderTracking />} />
-    <Route path="/profile" element={<Profile />} />
-    <Route path="/account-settings" element={<AccountSettings />} />
-    <Route path="*" element={<NotFound />} />
-  </Routes>
-);
+import Home from "../pages/Home";
+import Categories from "../pages/Categories";
+import Login from "../pages/Login";
+import Signup from "../pages/Signup";
+import OTPVerification from "../pages/OTPVerification";
+import ForgotPassword from "../pages/ForgotPassword";
+import ProductListing from "../pages/ProductListing";
+import ProductDetails from "../pages/ProductDetails";
+import SearchResults from "../pages/SearchResults";
+import Wishlist from "../pages/Wishlist";
+import Cart from "../pages/Cart";
+import AddressManagement from "../pages/AddressManagement";
+import Checkout from "../pages/Checkout";
+import Payment from "../pages/Payment";
+import OrderConfirmation from "../pages/OrderConfirmation";
+import MyOrders from "../pages/MyOrders";
+import OrderDetails from "../pages/OrderDetails";
+import OrderTracking from "../pages/OrderTracking";
+import Profile from "../pages/Profile";
+import AccountSettings from "../pages/AccountSettings";
+import NotFound from "../pages/NotFound";
+
+const routes = [
+  {
+    path: "/",
+    element: <Home />,
+  },
+  {
+    path: "/categories",
+    element: <Categories />,
+  },
+  {
+    path: "/login",
+    element: <Login />,
+  },
+  {
+    path: "/signup",
+    element: <Signup />,
+  },
+  {
+    path: "/otp-verification",
+    element: <OTPVerification />,
+  },
+  {
+    path: "/forgot-password",
+    element: <ForgotPassword />,
+  },
+  {
+    path: "/products",
+    element: <ProductListing />,
+  },
+  {
+    path: "/products/:id",
+    element: <ProductDetails />,
+  },
+  {
+    path: "/search",
+    element: <SearchResults />,
+  },
+  {
+    path: "/wishlist",
+    element: <Wishlist />,
+  },
+  {
+    path: "/cart",
+    element: <Cart />,
+  },
+  {
+    path: "/addresses",
+    element: <AddressManagement />,
+  },
+  {
+    path: "/checkout",
+    element: <Checkout />,
+  },
+  {
+    path: "/payment",
+    element: <Payment />,
+  },
+  {
+    path: "/order-confirmation",
+    element: <OrderConfirmation />,
+  },
+  {
+    path: "/orders",
+    element: <MyOrders />,
+  },
+  {
+    path: "/orders/:id",
+    element: <OrderDetails />,
+  },
+  {
+    path: "/orders/:id/tracking",
+    element: <OrderTracking />,
+  },
+  {
+    path: "/profile",
+    element: <Profile />,
+  },
+  {
+    path: "/account-settings",
+    element: <AccountSettings />,
+  },
+  {
+    path: "*",
+    element: <NotFound />,
+  },
+];
+
+const AppRoutes = () => {
+  return useRoutes(routes);
+};
 
 export default AppRoutes;
