@@ -2,36 +2,62 @@ import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
-    <nav className="navbar">
-      <div className="navbar-container">
+    <nav className="border-b border-gray-200 bg-white shadow-sm">
+      <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
 
-        <Link to="/" className="navbar-brand">
-          QuickBasket
+        <Link to="/" className="flex items-center gap-2">
+          <span className="flex h-10 w-10 items-center justify-center rounded-lg bg-yellow-400 text-lg font-bold text-gray-900">
+            QB
+          </span>
+
+          <span className="text-2xl font-bold text-gray-900">
+            Quick<span className="text-yellow-500">Basket</span>
+          </span>
         </Link>
 
-        <div className="navbar-links">
-          <Link to="/">Home</Link>
+        <div className="hidden items-center gap-7 md:flex">
+          <Link
+            to="/"
+            className="font-medium text-gray-700 transition hover:text-yellow-500"
+          >
+            Home
+          </Link>
 
-          <Link to="/categories">
+          <Link
+            to="/categories"
+            className="font-medium text-gray-700 transition hover:text-yellow-500"
+          >
             Categories
           </Link>
 
-          <Link to="/products">
+          <Link
+            to="/products"
+            className="font-medium text-gray-700 transition hover:text-yellow-500"
+          >
             Products
           </Link>
 
-          <Link to="/cart">
-            Cart
+          <Link
+            to="/cart"
+            className="rounded-lg bg-yellow-400 px-4 py-2 font-semibold text-gray-900 transition hover:bg-yellow-500"
+          >
+            🛒 Cart
           </Link>
 
-          <Link to="/wishlist">
-            Wishlist
-          </Link>
-
-          <Link to="/profile">
+          <Link
+            to="/profile"
+            className="font-medium text-gray-700 transition hover:text-yellow-500"
+          >
             Profile
           </Link>
         </div>
+
+        <button
+          type="button"
+          className="rounded-lg border border-gray-300 px-3 py-2 text-xl text-gray-700 md:hidden"
+        >
+          ☰
+        </button>
 
       </div>
     </nav>
